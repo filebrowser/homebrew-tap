@@ -5,33 +5,33 @@
 class Filebrowser < Formula
   desc "File Browser is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface"
   homepage "https://filebrowser.org"
-  version "2.17.1"
+  version "2.17.2"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.17.1/darwin-amd64-filebrowser.tar.gz"
-      sha256 "61e0b3492d42f7e9f4f9191eae82886c1a27ad76a0cb08992344b03aa08e0efe"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.17.2/darwin-amd64-filebrowser.tar.gz"
+      sha256 "bb76e6f02bf4611641702404b6117d19075118b77a4ec1786dc3963afaaa50a8"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.17.1/darwin-arm64-filebrowser.tar.gz"
-      sha256 "d10d8580c5f3ea8105d6e37aef12917ea84ff27ce9a9b94091ce004512d98d4c"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.17.2/darwin-arm64-filebrowser.tar.gz"
+      sha256 "3a9117ff3c9d6f761409ff48c5ab6b3617f3e93dbd2b939c500925cdc2d12d80"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.17.1/linux-amd64-filebrowser.tar.gz"
-      sha256 "9b29ea490d2167aa62034392cfaed2cd712285ac2ddd9205b086271478cf29ea"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.17.2/linux-amd64-filebrowser.tar.gz"
+      sha256 "0bc43fc6d429ab0ed76b267aa4771faaf15e1588abf946991c703aa795c7c6cd"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.17.1/linux-armv6-filebrowser.tar.gz"
-      sha256 "757a57aa866f93b4566b99be27fd6f2ef4809613dd85c0ef22336c2385f70a12"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.17.2/linux-armv6-filebrowser.tar.gz"
+      sha256 "e4a05bf98c111fcd2bce2a60e81e741ebfd708f9b498f79c7afc62a1ab87297f"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.17.1/linux-arm64-filebrowser.tar.gz"
-      sha256 "0495070f852bc2309d783045025ad2bbe89e7e8eb4edcb33fdc4fb6b8318fa8c"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.17.2/linux-arm64-filebrowser.tar.gz"
+      sha256 "cb678b90dff0dcdd350c0c5997ea5a9d98d1fd2fbad09830f4f45837ffe62833"
     end
   end
 
