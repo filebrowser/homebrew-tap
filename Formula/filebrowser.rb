@@ -5,21 +5,21 @@
 class Filebrowser < Formula
   desc "File Browser is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface"
   homepage "https://filebrowser.org"
-  version "2.29.0"
+  version "2.30.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.29.0/darwin-amd64-filebrowser.tar.gz"
-      sha256 "7b94b866c0a665a0cd291c7342f2d3b91733692c5ff5dea46b51a1fe9383f1d9"
+    on_intel do
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.30.0/darwin-amd64-filebrowser.tar.gz"
+      sha256 "40805c6c6b3a591df4643da614fec6e69712a2795487b787b53c3c4a335888dd"
 
       def install
         bin.install "filebrowser"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.29.0/darwin-arm64-filebrowser.tar.gz"
-      sha256 "3ead595fa8db364eb95c069882f0d9fd30363508f3770d940ed90b89d0cf4199"
+    on_arm do
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.30.0/darwin-arm64-filebrowser.tar.gz"
+      sha256 "220d5a8d50993da958393767c07cf70d70f4fc030919d8e326bc1d351a0db02b"
 
       def install
         bin.install "filebrowser"
@@ -28,28 +28,34 @@ class Filebrowser < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.29.0/linux-amd64-filebrowser.tar.gz"
-      sha256 "0b5b788e3b78e7bce84ee9047a9eff2d7deae030080a047c1bbb544eca16b0d0"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/filebrowser/filebrowser/releases/download/v2.30.0/linux-amd64-filebrowser.tar.gz"
+        sha256 "3464726bae923bca41197d9e04f3f9da450de2f41338dd1c1a76ffc010cbc750"
 
-      def install
-        bin.install "filebrowser"
+        def install
+          bin.install "filebrowser"
+        end
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.29.0/linux-armv6-filebrowser.tar.gz"
-      sha256 "f8eda86f0d15ac81069330c9f7688330199c493785e49512d3e3461391c06e14"
+    on_arm do
+      if !Hardware::CPU.is_64_bit?
+        url "https://github.com/filebrowser/filebrowser/releases/download/v2.30.0/linux-armv6-filebrowser.tar.gz"
+        sha256 "fadadd9391a28c93ca284647f86973f4c2657b57544a159d32881c06dbd3b9ed"
 
-      def install
-        bin.install "filebrowser"
+        def install
+          bin.install "filebrowser"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.29.0/linux-arm64-filebrowser.tar.gz"
-      sha256 "499b2fae58406e7f539ae75195e29a0924ea28915b6916ac66b97ba811af1124"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/filebrowser/filebrowser/releases/download/v2.30.0/linux-arm64-filebrowser.tar.gz"
+        sha256 "331ced65d50aae110fb16ade9db70b831db132baa153802ea73ee8d28175c9e1"
 
-      def install
-        bin.install "filebrowser"
+        def install
+          bin.install "filebrowser"
+        end
       end
     end
   end
