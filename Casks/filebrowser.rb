@@ -2,7 +2,7 @@
 cask "filebrowser" do
   desc "File Browser is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface"
   homepage "https://github.com/filebrowser/filebrowser"
-  version "2.32.2"
+  version "2.32.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "filebrowser" do
 
   on_macos do
     on_intel do
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.32.2/darwin-amd64-filebrowser.tar.gz"
-      sha256 "8aad26dfac8aa3adc4638866b9eb05f539c417b2f799cfeed7098f363a052fc6"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.32.3/darwin-amd64-filebrowser.tar.gz"
+      sha256 "5740dcd293e92034d9a9f688efc23770452f28930b6cbd6d2ce7dd613618de0e"
     end
     on_arm do
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.32.2/darwin-arm64-filebrowser.tar.gz"
-      sha256 "16c9b218c869f1a48b397167d6844f085b1bdbf36e56554aa65d1326d6b9dc62"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.32.3/darwin-arm64-filebrowser.tar.gz"
+      sha256 "d335ecde240f9f1f25ffdef23a18ec0412300b8a8a055b75d02fca388050f4fd"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.32.2/linux-amd64-filebrowser.tar.gz"
-      sha256 "c5a6cb5f0cb80f788713dc85d44b4da8e6a8c946dc746c3d644a4f0cc2c64d2d"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.32.3/linux-amd64-filebrowser.tar.gz"
+      sha256 "f75ec14b9e2d71b13df88557b885d187ea5723e7605e623a35e42a2358c63a69"
     end
     on_arm do
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.32.2/linux-arm64-filebrowser.tar.gz"
-      sha256 "f06cec06e28091e27497b44404f20b66f1430e836f7421608ba9ae9538e58813"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.32.3/linux-arm64-filebrowser.tar.gz"
+      sha256 "9e9f7cb0c34e921a95b96c2fdc0b458fae0960ac3ac41f59fdd4a127c4b78588"
     end
   end
 
@@ -38,8 +38,7 @@ cask "filebrowser" do
 
   postflight do
     if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
-      # replace 'foo' with the actual binary name
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/foo"]
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/filebrowser"]
     end
   end
 
