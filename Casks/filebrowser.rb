@@ -2,7 +2,7 @@
 cask "filebrowser" do
   desc "File Browser is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface"
   homepage "https://github.com/filebrowser/filebrowser"
-  version "2.32.3"
+  version "2.33.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,29 +12,25 @@ cask "filebrowser" do
 
   on_macos do
     on_intel do
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.32.3/darwin-amd64-filebrowser.tar.gz"
-      sha256 "5740dcd293e92034d9a9f688efc23770452f28930b6cbd6d2ce7dd613618de0e"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.33.0/darwin-amd64-filebrowser.tar.gz"
+      sha256 "358c9c107db37671911d56ff2b5f062cdd2ab27410bb30542831c9f6384c23bf"
     end
     on_arm do
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.32.3/darwin-arm64-filebrowser.tar.gz"
-      sha256 "d335ecde240f9f1f25ffdef23a18ec0412300b8a8a055b75d02fca388050f4fd"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.33.0/darwin-arm64-filebrowser.tar.gz"
+      sha256 "0454129ab5f8b2e202f9cd81b0ea64b861f118cd5244b2e5079534fcdf3d9dea"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.32.3/linux-amd64-filebrowser.tar.gz"
-      sha256 "f75ec14b9e2d71b13df88557b885d187ea5723e7605e623a35e42a2358c63a69"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.33.0/linux-amd64-filebrowser.tar.gz"
+      sha256 "3405b8fdecf77375fa441cbe5d0b1b2af01c79ba18a67682e37a812db598234d"
     end
     on_arm do
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.32.3/linux-arm64-filebrowser.tar.gz"
-      sha256 "9e9f7cb0c34e921a95b96c2fdc0b458fae0960ac3ac41f59fdd4a127c4b78588"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.33.0/linux-arm64-filebrowser.tar.gz"
+      sha256 "0dfa1b11c783427666657a30dea27dea5c2cde28c904516993835b13bfec49e8"
     end
   end
-
-  conflicts_with formula: [
-      "filebrowser",
-    ]
 
   postflight do
     if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
