@@ -2,7 +2,7 @@
 cask "filebrowser" do
   desc "File Browser is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface"
   homepage "https://github.com/filebrowser/filebrowser"
-  version "2.33.5"
+  version "2.33.6"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "filebrowser" do
 
   on_macos do
     on_intel do
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.33.5/darwin-amd64-filebrowser.tar.gz"
-      sha256 "5ec79a708bf122a50d4f7b66b6d035b32ea50acfddee374ce56ca02d1af64a46"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.33.6/darwin-amd64-filebrowser.tar.gz"
+      sha256 "70b669f76519a4ec29e8001d0d25eb9d72325a9b84887e796c45df0b9b22039d"
     end
     on_arm do
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.33.5/darwin-arm64-filebrowser.tar.gz"
-      sha256 "7cd8447f222709d369b2ed3f2d80b8c934d0d219e5aca09f7bb242e071defcd3"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.33.6/darwin-arm64-filebrowser.tar.gz"
+      sha256 "52f0119e822e68583bc18b460aa561a16fc2d2879a5ff1c43fa6e766e4cd9fdf"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.33.5/linux-amd64-filebrowser.tar.gz"
-      sha256 "4a36d6c2f8d3bc81dc676f59cd4ec2df020fbf226680d34cd1a28933a36e5bc9"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.33.6/linux-amd64-filebrowser.tar.gz"
+      sha256 "fc8338841c3c172df6d6a36dd30827eec3bacbbb8f41d954451b93d9028e3bd4"
     end
     on_arm do
-      url "https://github.com/filebrowser/filebrowser/releases/download/v2.33.5/linux-arm64-filebrowser.tar.gz"
-      sha256 "2c5e5d7d15dd29d5a7c606b7e4a42f2d2dae496975ea75d043d53b1432bdd5e8"
+      url "https://github.com/filebrowser/filebrowser/releases/download/v2.33.6/linux-arm64-filebrowser.tar.gz"
+      sha256 "4f7ae16300af1936b25400e59d0cadfa0ecd2f6bfceeb5c09469db7d60c872ac"
     end
   end
 
