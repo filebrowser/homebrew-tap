@@ -3,7 +3,7 @@ cask "filebrowser" do
   name "filebrowser"
   desc "File Browser is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface"
   homepage "https://github.com/filebrowser/filebrowser"
-  version "2.52.0"
+  version "2.53.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "filebrowser" do
   on_macos do
     on_intel do
       url "https://github.com/filebrowser/filebrowser/releases/download/v#{version}/darwin-amd64-filebrowser.tar.gz"
-      sha256 "4f3ff43187c359f604730ce2db075a5f435463de247723945baf5dbe7c77a8e6"
+      sha256 "bc19a768c64fd883848a3e14d45164e9c654f4f8b7f831a23db2618053057fae"
     end
     on_arm do
       url "https://github.com/filebrowser/filebrowser/releases/download/v#{version}/darwin-arm64-filebrowser.tar.gz"
-      sha256 "806e93eea4c1ef97d4833eef7081c5687354b14366fef0dde101f0d563d3b996"
+      sha256 "e72ce713b2e79d420ee935ed84bc79a850db0b9701983852aa1997a5d1dfa964"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/filebrowser/filebrowser/releases/download/v#{version}/linux-amd64-filebrowser.tar.gz"
-      sha256 "72b89a3f2d3a00f8d1818af73ea510a76eee3f9e00298e66915265ed731a5d92"
+      sha256 "30b8861c3a3a5604a21f1de91ba59ebbeac75668b2895409429bb3d3710a554d"
     end
     on_arm do
       url "https://github.com/filebrowser/filebrowser/releases/download/v#{version}/linux-arm64-filebrowser.tar.gz"
-      sha256 "37ad36b84848649a8ea8fa17ead118183ecd238f56e69274da08976ab00e0b32"
+      sha256 "8c4c22f0b057defcd8cff7c11754fae478cccce25e9e891808286616f8859652"
     end
   end
 
