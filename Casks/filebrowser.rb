@@ -32,6 +32,8 @@ cask "filebrowser" do
     skip "Auto-generated on release."
   end
 
+  deprecate! date: "2026-07-27", because: :unmaintained
+
   binary "filebrowser"
 
   postflight do
